@@ -55,14 +55,14 @@ Installation
             - ...
     
     
-    - Add a new rule in nanoc Rules file to use the generated layout (layouts/pattern_primer.html).
+  - Add a new rule in nanoc Rules file to use the generated layout (layouts/pattern_primer.html).
     
-        For example:
-        
-        `compile '/pattern_primer/' do
-          filter :erb
-          layout 'pattern_primer'
-        end`
+     For example:
+     
+     <pre>`compile '/pattern_primer/' do
+       filter :erb
+       layout 'pattern_primer'
+     end`</pre>
 
         
 

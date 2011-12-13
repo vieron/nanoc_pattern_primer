@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title><%= @item[:title] %></title>
-    <link rel="stylesheet" type="text/css" href="pattern_primer/stylesheets/main.css" media="screen">
-    <link rel="stylesheet" href="pattern_primer/javascripts/codemirror/codemirror.css" type="text/css" media="screen" title="no title" charset="utf-8">    
-    <link rel="stylesheet" href="pattern_primer/javascripts/codemirror/theme/default.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="<%=relative_path_to('/pattern_primer/stylesheets/main.css')%>" media="screen">
+    <link rel="stylesheet" href="<%=relative_path_to('/pattern_primer/javascripts/codemirror/codemirror.css')%>" type="text/css" media="screen" title="no title" charset="utf-8">    
+    <link rel="stylesheet" href="<%=relative_path_to('/pattern_primer/javascripts/codemirror/theme/default.css')%>" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   
   
@@ -77,7 +77,7 @@
          
     </script>
     
-    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/codemirror.js/')%>" type="text/javascript" charset="utf-8"></script>
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/codemirror.js')%>" type="text/javascript" charset="utf-8"></script>
     
     <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/xml/xml.js')%>" type="text/javascript" charset="utf-8"></script>
     <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/javascript/javascript.js')%>" type="text/javascript" charset="utf-8"></script>

@@ -1,26 +1,7 @@
-module Pattern_Primer
-  
-  class Mod
-        
-    
-    
-  end
-  
-end
-
-
-
-
-
-
 module Nanoc3::Helpers
 
   module PatternPrimer 
     
-    def concat(html, block)
-
-    end
-
     def mod(name, &tmpl)
       rand_id = rand(9999-1)+1
       block_s = capture(&tmpl)
