@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link rel="stylesheet" type="text/css" href="pattern_primer/stylesheets/main.css" media="screen">
+    <link rel="stylesheet" href="pattern_primer/javascripts/codemirror/codemirror.css" type="text/css" media="screen" title="no title" charset="utf-8">    
+    <link rel="stylesheet" href="pattern_primer/javascripts/codemirror/theme/default.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  
+  
+  <body>
+    
+    <div class="pp-wrapper">
+      <h1><%= @item[:title] %></h1>
+      
+      <%= yield %>
+    </div>
+    
+    
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/zeroclipboard/ZeroClipboard.js')%>" type="text/javascript" charset="utf-8"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      
+      
+      //TODO: remove this spaghetti code
+      
+      ZeroClipboard.setMoviePath( "<%=relative_path_to('/pattern_primer/javascripts/zeroclipboard/ZeroClipboard.swf')%>");
+      
+
+      $(function(){
+        
+        $('.pp-module').each( function(e){
+          var $parent = $(this),
+              $textarea = $parent.find('.raw textarea'),
+              $copy_link = $parent.find('.raw_copy');
+          
+          var clip = new ZeroClipboard.Client();
+          
+          // clip.setText( $textarea.data('codemirror').getValue() );
+          clip.setText( $textarea.val() );
+          clip.glue( $copy_link.attr('id'), $copy_link.parent().attr('id') );
+          
+        });
+        
+        $('.pp-icon-code').bind('click', function(e){
+          e.preventDefault();
+          var $parent = $(this).closest('.pp-module');
+          
+          if ($(this).hasClass('initialized')) {
+            $parent.find('.code .raw').toggle();
+          }else{ 
+            var $textarea_wrap = $parent.find('.raw');
+                $textarea = $textarea_wrap.find('textarea');
+            
+            $textarea_wrap.show();
+            
+            var cm_api = CodeMirror.fromTextArea( $textarea[0] , {
+              mode : 'text/html',
+              theme : 'default',
+              tabSize : 2,
+              onChange : function(ins, info){
+                $parent.find('.preview').html( ins.getValue() );
+              }
+            });
+
+            $(this).data('codemirror', cm_api);
+            
+            $(this).addClass('initialized')
+          }
+        });
+      })
+         
+    </script>
+    
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/codemirror.js/')%>" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/xml/xml.js')%>" type="text/javascript" charset="utf-8"></script>
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/javascript/javascript.js')%>" type="text/javascript" charset="utf-8"></script>
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/css/css.js')%>" type="text/javascript" charset="utf-8"></script>
+    <script src="<%=relative_path_to('/pattern_primer/javascripts/codemirror/mode/htmlmixed/htmlmixed.js')%>" type="text/javascript" charset="utf-8"></script>
+    
+    
+  </body>
+</html>
