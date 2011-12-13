@@ -73,13 +73,13 @@ Usage
   
     you can use de mod helper to render the snippet:
     
-    <% mod 'mod_list' do %>
-      <ul class="mod_list">
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-      </ul>
-    <% end %>
+    <pre>&lt;% mod &#x27;mod_list&#x27; do %&gt;
+      &lt;ul class=&quot;mod_list&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;% end %&gt;</pre>
 
     
 

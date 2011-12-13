@@ -57,12 +57,14 @@
             
             $textarea_wrap.show();
             
+            var $preview = $parent.find('.preview');
+            
             var cm_api = CodeMirror.fromTextArea( $textarea[0] , {
               mode : 'text/html',
               theme : 'default',
               tabSize : 2,
               onChange : function(ins, info){
-                $parent.find('.preview').html( ins.getValue() );
+                $preview.html( ins.getValue() );
               }
             });
 
