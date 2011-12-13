@@ -26,13 +26,13 @@ Installation
   
   - And the following in lib/default.rb
   
-    `require 'pattern_primer'
+    <pre>`require 'pattern_primer'
 
     include Nanoc3::Helpers::PatternPrimer
 
     include Nanoc3::Helpers::Capturing
     include Nanoc3::Helpers::LinkTo
-    include Nanoc3::Helpers::HTMLEscape`
+    include Nanoc3::Helpers::HTMLEscape`</pre>
 
   - Now, go to your nanoc Project path on the command line and run the following Rake task:
   
