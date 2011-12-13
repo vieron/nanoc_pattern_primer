@@ -69,9 +69,9 @@ Installation
 Usage
 -----
 
-  - In your content/patter_primer.html or any other that uses the pattern_primer.html layout (defined in nanoc Rules)
+  - In your content/pattern_primer.html or any other that uses the pattern_primer.html layout (defined in nanoc Rules)
   
-    you can use de mod helper to render the snippet:
+    you can use the mod helper to render the snippet:
     
     <pre>&lt;% mod &#x27;mod_list&#x27; do %&gt;
       &lt;ul class=&quot;mod_list&quot;&gt;
