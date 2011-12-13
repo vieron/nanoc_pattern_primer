@@ -6,7 +6,10 @@ Pattern Primer gem for nanoc
 
 Based on http://adactio.com/journal/5028/
 
+Demo
+----
 
+http://vieron.github.com/nanoc_pattern_primer/
 
 Features
 --------
@@ -26,13 +29,13 @@ Installation
   
   - And the following in lib/default.rb
   
-    <pre>`require 'pattern_primer'
+    <pre>require 'pattern_primer'
 
     include Nanoc3::Helpers::PatternPrimer
 
     include Nanoc3::Helpers::Capturing
     include Nanoc3::Helpers::LinkTo
-    include Nanoc3::Helpers::HTMLEscape`</pre>
+    include Nanoc3::Helpers::HTMLEscape</pre>
 
   - Now, go to your nanoc Project path on the command line and run the following Rake task:
   
