@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #EEE;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #f30;
+}
+
+a:hover {
+  color: #f90;
+}
+
+ul,
+ol {
+  margin-left:20px;
+}
+
+h1 {
+  color:#666;
+  padding-bottom:15px;
+}
+
+.pp-wrapper {
+  width:97%;
+  margin:20px auto;
+}
+
+.pp-module {
+  margin-bottom:30px;
+}
+
+.pp-module .code {
+  overflow:hidden;
+  background:#FFF;
+  padding:20px;
+}
+
+.pp-module .head {
+  padding:10px 20px;
+  overflow:hidden;
+  color:#FFF;
+  text-transform:capitalize;
+  background:#555;
+}
+
+.pp-module .head h2 {
+  display: inline;
+  float: left;
+  padding-top: 6px;
+}
+
+.pp-module .head ul {
+  float:right;
+  overflow:hidden;
+}
+
+.pp-module .head ul li{
+  float:right;
+  display:inline;
+  margin-left:10px;
+}
+
+.pp-module .preview {
+  padding-bottom:20px;
+}
+
+.pp-module .raw {
+  display:none;
+}
+
+.pp-module textarea{
+  width:96%;
+  color:#999;
+  font-size:13px;
+  min-height:100px;
+  padding:5px;
+  line-height:1.3em;
+  
+  border:1px solid #DDD;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+}
+
+.pp-icon-copy,
+.pp-icon-code {
+  display:-moz-inline-stack;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  width:40px;
+  height:40px;
+}
+
+.pp-icon-copy div,
+.pp-icon-copy .raw_copy {
+  display:block;
+  height:40px;
+  width:40px;
+}
+
+.pp-icon-copy .raw_copy,
+.pp-icon-code {
+  text-indent:-999em;
+}
+
+
+
+.pp-icon-copy {
+  background: url('../images/icon_copy.gif') no-repeat left top;
+}
+
+.pp-icon-code {
+  background: url('../images/icon_code.gif') no-repeat left top;
+}
+
+.pp-icon-copy:hover,
+.pp-icon-code:hover {
+  background-position: left bottom;
+}
